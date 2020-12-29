@@ -2,7 +2,6 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { StyleSheet, TouchableOpacity } from 'react-native';
 import Home from '../../features/Home';
-import MyHealthBtn from '../../components/MyHealthBtn';
 import Icon from '../../common/Icon';
 import { Colors, Metrics } from '..';
 
@@ -15,6 +14,11 @@ const icons = {
     private: false,
   },
   Places: {
+    source: 'FontAwesome',
+    name: 'hospital-o',
+    private: true,
+  },
+  MyHealth: {
     source: 'FontAwesome',
     name: 'hospital-o',
     private: true,
@@ -35,9 +39,6 @@ export default ({ navigation: mainNavigation }) => {
   console.log('rodei homenavi');
   const screenOptionsRender = (route) => ({
     tabBarIcon: ({ focused }) => {
-      if (route.name === 'MyHealth') {
-        return <MyHealthBtn title="Minha Saúde" focused={focused} />;
-      }
       const { source, name } = icons[route.name];
       return (
         <Icon
