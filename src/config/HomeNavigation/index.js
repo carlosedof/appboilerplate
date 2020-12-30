@@ -15,12 +15,12 @@ const icons = {
   },
   Places: {
     source: 'FontAwesome',
-    name: 'hospital-o',
+    name: 'user',
     private: true,
   },
   MyHealth: {
     source: 'FontAwesome',
-    name: 'hospital-o',
+    name: 'user',
     private: true,
   },
   Notifications: {
@@ -45,7 +45,7 @@ export default ({ navigation: mainNavigation }) => {
           source={source}
           iconName={name}
           size={30}
-          color={focused ? Colors.mainTheme.primary : Colors.mainTheme.softGray}
+          color={focused ? Colors.mainTheme.primary : Colors.mainTheme.primary}
         />
       );
     },
@@ -87,5 +87,5 @@ export default ({ navigation: mainNavigation }) => {
 };
 
 const styles = StyleSheet.create({
-  tabBarOptions: { height: 70, paddingBottom: Metrics.spacingLG },
+  tabBarOptions: { height: 70, paddingBottom: Metrics.spacing.lg },
 });

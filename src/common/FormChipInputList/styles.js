@@ -10,6 +10,6 @@ export const ChipStyled = styled.View`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border-color: ${Colors.mainTheme.softGray};
-  background-color: ${Colors.mainTheme.softGray};
+  border-color: ${Colors.mainTheme.primary};
+  background-color: ${Colors.mainTheme.primary};
 `;

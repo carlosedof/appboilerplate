@@ -9,7 +9,7 @@ import { Metrics } from '../../config';
 
 export default function CloseBtn({
   onPress,
-  color = Colors.mainTheme.softGray,
+  color = Colors.mainTheme.primary,
   topLeft,
   topRight,
   btRight,
@@ -23,7 +23,7 @@ export default function CloseBtn({
         btRight={btRight}
         btLeft={btLeft}
       >
-        <Text size={Metrics.fontSize.xxlg} color={Colors.mainTheme.softGray}>
+        <Text size={Metrics.fontSize.xxlg} color={Colors.mainTheme.primary}>
           X
         </Text>
       </ViewStyled>

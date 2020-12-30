@@ -17,7 +17,7 @@ export const { Types, Creators } = createActions({
 
 const INITIAL_STATE = {
   error: null,
-  isfetching: false,
+  isFetching: false,
   isCpffetching: false,
   createSuccess: false,
   createError: false,
@@ -27,30 +27,20 @@ const INITIAL_STATE = {
   registrationData: {
     cpf: '',
     rg: '',
-    n_cartao_sus: '',
     sexo: '',
     nome: '',
     sobrenome: '',
     data_nascimento: '',
-    nacionalidade: '',
-    estado_civil: null,
-    endereco: '',
     email: '',
     celular: '',
-    telefone: '',
-    profissao: null,
-    escolaridade: null,
     senha: '',
-    tempo_gestacao: null,
-    alergias: [],
-    doencas: [],
   },
 };
 
 const createRequest = (state = INITIAL_STATE) => {
   return {
     ...state,
-    isfetching: true,
+    isFetching: true,
   };
 };
 
@@ -65,39 +55,39 @@ const resetState = (state = INITIAL_STATE) => ({
   ...state,
   createSuccess: false,
   createError: false,
-  isfetching: false,
+  isFetching: false,
 });
 
 const createSuccess = (state = INITIAL_STATE) => ({
   ...state,
   createSuccess: true,
-  isfetching: false,
+  isFetching: false,
 });
 
 const createFailed = (state = INITIAL_STATE, { error }) => ({
   ...state,
   error,
-  isfetching: false,
+  isFetching: false,
 });
 
 const validateCpfRequest = (state = INITIAL_STATE) => {
   return {
     ...state,
     cpfExist: false,
-    isfetching: true,
+    isFetching: true,
   };
 };
 
 const validateCpfSuccess = (state = INITIAL_STATE, { exist: cpfExist }) => ({
   ...state,
   cpfExist,
-  isfetching: false,
+  isFetching: false,
 });
 
 const validateCpfFailed = (state = INITIAL_STATE, { error }) => ({
   ...state,
   error,
-  isfetching: false,
+  isFetching: false,
 });
 
 const changeIsFetching = (state = INITIAL_STATE, { isFetching }) => ({

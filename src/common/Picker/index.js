@@ -38,7 +38,7 @@ const Picker = ({
   return (
     <DropContainer
       style={{
-        borderColor: error ? Colors.mainTheme.error : Colors.mainTheme.gray,
+        borderColor: error ? Colors.mainTheme.error : Colors.mainTheme.primary,
       }}
     >
       <AnimatedContainer
@@ -48,7 +48,7 @@ const Picker = ({
       >
         <Text
           size={value ? Metrics.fontSize.xxxsm : Metrics.fontSize.xsm}
-          color={error ? Colors.mainTheme.error : Colors.mainTheme.gray}
+          color={error ? Colors.mainTheme.error : Colors.mainTheme.primary}
           textAlign="left"
         >
           {label + (required ? '*' : '')}
@@ -66,7 +66,7 @@ const Picker = ({
             iconName="down"
             source="AntDesign"
             size={17}
-            color={Colors.mainTheme.gray}
+            color={Colors.mainTheme.primary}
           />
         )}
       />

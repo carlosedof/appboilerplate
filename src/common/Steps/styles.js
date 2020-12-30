@@ -13,12 +13,12 @@ export const Step = styled.View`
   }};
   border-color: ${({ current, index }) => {
     if (current === index) {
-      return `${Colors.mainTheme.secondary}`;
+      return `${Colors.mainTheme.primary}`;
     }
     if (current > index) {
-      return `${Colors.mainTheme.btnPrimary}`;
+      return `${Colors.mainTheme.aux}`;
     }
-    return `${Colors.mainTheme.primary}`;
+    return `${Colors.mainTheme.aux}`;
   }};
   border-width: 1px;
   padding: 12px 20px;

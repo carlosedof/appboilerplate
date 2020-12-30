@@ -1,8 +1,8 @@
 import { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Creators } from '../reducers/patient';
+import { Creators } from '../reducers/user';
 
-export const usePatientCreateRequest = () => {
+export const useUserCreateRequest = () => {
   const dispatch = useDispatch();
   return useCallback(
     (data) => {
@@ -22,7 +22,7 @@ export const useSaveRegistrationData = () => {
   );
 };
 
-export const usePatientReset = () => {
+export const useUserReset = () => {
   const dispatch = useDispatch();
   return useCallback(() => {
     dispatch(Creators.resetState());
@@ -30,22 +30,22 @@ export const usePatientReset = () => {
 };
 
 export const useRegistrationData = () => {
-  return useSelector((state) => state.patient.registrationData);
+  return useSelector((state) => state.user.registrationData);
 };
 
-export const usePatientIsFetching = () => {
-  return useSelector((state) => state.patient.isfetching);
+export const useUserIsFetching = () => {
+  return useSelector((state) => state.user.isFetching);
 };
 
-export const usePatientIsCpfFetching = () => {
-  return useSelector((state) => state.patient.isCpffetching);
+export const useUserIsCpfFetching = () => {
+  return useSelector((state) => state.user.isCpfFetching);
 };
 
-export const usePatientCreateSuccess = () => {
-  return useSelector((state) => state.patient.createSuccess);
+export const useUserCreateSuccess = () => {
+  return useSelector((state) => state.user.createSuccess);
 };
 
-export const usePatientCValidateCpfRequest = () => {
+export const useUserValidateCpfRequest = () => {
   const dispatch = useDispatch();
   return useCallback(
     (cpf) => {
@@ -55,10 +55,10 @@ export const usePatientCValidateCpfRequest = () => {
   );
 };
 
-export const usePatientCpfExist = () => {
-  return useSelector((state) => state.patient.cpfExist);
+export const useUserCpfExist = () => {
+  return useSelector((state) => state.user.cpfExist);
 };
 
-export const usePatientCurrentCpfIsValid = () => {
-  return useSelector((state) => state.patient.currentCpfIsValid);
+export const useUserCurrentCpfIsValid = () => {
+  return useSelector((state) => state.user.currentCpfIsValid);
 };

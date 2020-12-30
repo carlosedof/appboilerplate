@@ -29,11 +29,11 @@ const Loader = () => {
       }}
     >
       <LoaderStyled>
-        <Text size={Metrics.fontSize.xsm} color={Colors.mainTheme.black}>
+        <Text size={Metrics.fontSize.xsm} color={Colors.mainTheme.aux}>
           Por favor aguarde. Carregando...
         </Text>
-        <Whitespace height={Metrics.spacingLG} />
-        <ActivityIndicatorStyled size="large" color={Colors.mainTheme.black} />
+        <Whitespace height={Metrics.spacing.lg} />
+        <ActivityIndicatorStyled size="large" color={Colors.mainTheme.aux} />
       </LoaderStyled>
     </Animated.View>
   ) : (

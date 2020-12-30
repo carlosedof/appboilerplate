@@ -5,16 +5,16 @@ const { width, height } = Dimensions.get('window');
 const screenWidth = height < width ? height : width;
 const screenHeight = width < height ? height : width;
 const headerSize = screenHeight / 6;
-
-const spacingMinimun = 4;
-const spacingSM = 8;
-const spacingMD = 12;
-const spacingLG = 24;
-const spacingXLG = 36;
-
 const subHeaderHeight = 32;
-
 const refresherSize = 80;
+
+const spacing = {
+  minimum: 4,
+  sm: 8,
+  md: 12,
+  lg: 24,
+  xlg: 36,
+};
 
 const fontSize = {
   xxxsm: '12px',
@@ -32,11 +32,7 @@ export default {
   screenWidth,
   screenHeight,
   subHeaderHeight,
-  spacingMinimun,
-  spacingSM,
-  spacingMD,
-  spacingLG,
-  spacingXLG,
+  spacing,
   refresherSize,
   headerSize,
 };

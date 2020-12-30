@@ -16,8 +16,8 @@ const Steps = ({ steps = [], current }) => {
               <Text
                 color={
                   current === index || current > index
-                    ? Colors.mainTheme.secondary
-                    : Colors.mainTheme.primary
+                    ? Colors.mainTheme.white
+                    : Colors.mainTheme.white
                 }
               >
                 {index + 1}
@@ -39,7 +39,7 @@ const Steps = ({ steps = [], current }) => {
                 ? Colors.mainTheme.primary
                 : current > index
                 ? Colors.mainTheme.btnPrimary
-                : Colors.mainTheme.black
+                : Colors.mainTheme.aux
             }
           >
             <Bold>{item.name}</Bold>

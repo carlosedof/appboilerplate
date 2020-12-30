@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 import { Metrics } from '../../config';
 
 export const Container = styled.View`
-  padding: ${Metrics.spacingLG}px;
+  padding: ${Metrics.spacing.lg}px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,12 +12,12 @@ export const Container = styled.View`
 export const FirstImage = styled.Image`
   width: ${({ width }) => width}px;
   height: ${({ height }) => height}px;
-  margin-bottom: ${Metrics.spacingLG}px;
+  margin-bottom: ${Metrics.spacing.lg}px;
 `;
 
 export const ButtonContainer = styled.View`
   width: 100%;
-  margin-top: ${Metrics.spacingLG}px;
+  margin-top: ${Metrics.spacing.lg}px;
 `;
 
 export const CloseButtonContainer = styled.View`

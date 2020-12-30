@@ -39,7 +39,7 @@ const Slider = ({
       <Text color={Colors.mainTheme.primary} size={Metrics.fontSize.sm}>
         <Bold>{label + (required ? '*' : '')}</Bold>
       </Text>
-      <Whitespace height={Metrics.spacingMD} />
+      <Whitespace height={Metrics.spacing.md} />
       <SliderNative
         value={value}
         style={{ width: '100%', height: 40 }}
@@ -55,25 +55,29 @@ const Slider = ({
         step={1}
         minimumTrackTintColor={getColorForValue()}
       />
-      <Flex dir="row" justify="space-around" verticalMargin={Metrics.spacingMD}>
+      <Flex
+        dir="row"
+        justify="space-around"
+        verticalMargin={Metrics.spacing.md}
+      >
         <Flex width={33}>
           <Text
             textAlign="left"
-            color={Colors.mainTheme.black}
+            color={Colors.mainTheme.aux}
             size={Metrics.fontSize.sm}
           >
             Melhor
           </Text>
         </Flex>
         <Flex width={33}>
-          <Text color={Colors.mainTheme.black} size={Metrics.fontSize.sm}>
+          <Text color={Colors.mainTheme.aux} size={Metrics.fontSize.sm}>
             Igual
           </Text>
         </Flex>
         <Flex width={33}>
           <Text
             textAlign="right"
-            color={Colors.mainTheme.black}
+            color={Colors.mainTheme.aux}
             size={Metrics.fontSize.sm}
           >
             Pior

@@ -1,6 +1,6 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
-import { Creators, Types } from '../reducers/patient';
-import { createRequest, validateCpf } from '../../services/patient';
+import { Creators, Types } from '../reducers/user';
+import { createRequest, validateCpf } from '../../services/user';
 import { setSnackbarInfos } from '../../components/Snackbar/snackbarUtils';
 
 export function* create({ requestData }) {
@@ -32,7 +32,7 @@ export function* existsCpf({ cpf }) {
   }
 }
 
-export const patientSagas = [
+export const userSagas = [
   takeLatest(Types.CREATE_REQUEST, create),
   takeLatest(Types.VALIDATE_CPF_REQUEST, existsCpf),
 ];

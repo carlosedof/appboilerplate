@@ -5,9 +5,9 @@ export const Block = styled.View`
   display: flex;
   width: 100%;
   border-radius: 8px;
-  padding: ${Metrics.spacingXLG}px;
-  margin: ${Metrics.spacingSM}px ${Metrics.spacingLG}px;
-  background: ${Colors.mainTheme.lightGray};
+  padding: ${Metrics.spacing.xlg}px;
+  margin: ${Metrics.spacing.sm}px ${Metrics.spacing.lg}px;
+  background: ${Colors.mainTheme.primary};
 `;
 
 export const Thumb = styled.View`

@@ -22,7 +22,7 @@ const Radio = ({
   useEffect(() => onChange(answer), [answer]);
   return (
     <Flex justify="flex-start" align="flex-start" verticalMargin={5}>
-      <Text color={Colors.mainTheme.black} size={Metrics.fontSize.sm}>
+      <Text color={Colors.mainTheme.aux} size={Metrics.fontSize.sm}>
         {question + (required ? '*' : '')}
       </Text>
       <Flex dir="row" justify="flex-start" verticalMargin={5}>
@@ -44,7 +44,7 @@ const Radio = ({
             </RadioStyled>
             <Whitespace width={8} />
             <Text
-              color={Colors.mainTheme.black}
+              color={Colors.mainTheme.aux}
               size={Metrics.fontSize.xsm}
               textAlign="left"
             >
@@ -71,7 +71,7 @@ const Radio = ({
             </RadioStyled>
             <Whitespace width={8} />
             <Text
-              color={Colors.mainTheme.black}
+              color={Colors.mainTheme.aux}
               size={Metrics.fontSize.xsm}
               textAlign="left"
             >

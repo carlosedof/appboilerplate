@@ -69,12 +69,12 @@ const ChipInputList = ({
     <Flex
       justify="flex-start"
       align="flex-start"
-      verticalMargin={Metrics.spacingMinimun}
+      verticalMargin={Metrics.spacing.minimum}
     >
-      <Text color={Colors.mainTheme.black} size={Metrics.fontSize.sm}>
+      <Text color={Colors.mainTheme.aux} size={Metrics.fontSize.sm}>
         {label}
       </Text>
-      <Whitespace height={Metrics.spacingSM} />
+      <Whitespace height={Metrics.spacing.sm} />
       <InputText
         value={inputValue}
         onChange={handleChangeInputValue}
@@ -84,15 +84,15 @@ const ChipInputList = ({
         <Flex
           dir="row"
           justify="flex-start"
-          verticalMargin={Metrics.spacingMinimun}
+          verticalMargin={Metrics.spacing.minimum}
           flexWrap
         >
-          <Text color={Colors.mainTheme.black} size={Metrics.fontSize.xxsm}>
+          <Text color={Colors.mainTheme.aux} size={Metrics.fontSize.xxsm}>
             Sugestões:
           </Text>
           {suggestionsFiltered.map((item, index) => (
             <TouchableStyled
-              margin={Metrics.spacingMinimun}
+              margin={Metrics.spacing.minimum}
               key={index}
               onPress={() => {
                 if (!isDuplicatedItem(item)) {
@@ -103,13 +103,10 @@ const ChipInputList = ({
               }}
             >
               <ChipStyled>
-                <Text
-                  color={Colors.mainTheme.black}
-                  size={Metrics.fontSize.xxsm}
-                >
+                <Text color={Colors.mainTheme.aux} size={Metrics.fontSize.xxsm}>
                   {item.nome}
                 </Text>
-                <Whitespace width={Metrics.spacingMinimun} />
+                <Whitespace width={Metrics.spacing.minimum} />
                 <Icon
                   source="AntDesign"
                   iconName="plus"
@@ -124,22 +121,22 @@ const ChipInputList = ({
       <Flex
         dir="row"
         justify="flex-start"
-        verticalMargin={Metrics.spacingMinimun}
+        verticalMargin={Metrics.spacing.minimum}
         flexWrap
       >
         {items.map((item, index) => (
           <TouchableStyled
-            margin={Metrics.spacingSM}
+            margin={Metrics.spacing.sm}
             key={index}
             onPress={() => {
               setItems((oldList) => oldList.filter((i) => i !== item));
             }}
           >
             <ChipStyled>
-              <Text color={Colors.mainTheme.black} size={Metrics.fontSize.sm}>
+              <Text color={Colors.mainTheme.aux} size={Metrics.fontSize.sm}>
                 {item.nome}
               </Text>
-              <Whitespace width={Metrics.spacingMinimun} />
+              <Whitespace width={Metrics.spacing.minimum} />
               <Icon
                 source="AntDesign"
                 iconName="close"

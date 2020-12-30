@@ -5,7 +5,7 @@ import Metrics from '../../config/Metrics';
 
 const Text = ({
   size = Metrics.fontSize.md,
-  color = Colors.mainTheme.textPrimary,
+  color = Colors.mainTheme.primary,
   children,
   textAlign = 'center',
   bolder = false,

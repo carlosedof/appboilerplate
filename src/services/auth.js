@@ -2,7 +2,7 @@ import api from './api';
 
 const loginRequest = (credentials) => {
   return api
-    .post(`aplicativo/paciente/login`, credentials)
+    .post(`aplicativo/login`, credentials)
     .then((response) => {
       return response;
     })

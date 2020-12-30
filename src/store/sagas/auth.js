@@ -11,7 +11,6 @@ export function* authenticate({
   isRouteName,
 }) {
   try {
-    yield delay(2000);
     const { data } = yield call(loginRequest, credentials);
     yield put(Creators.loginSuccess(data.token));
     yield call(Storage.setToken, data.token);

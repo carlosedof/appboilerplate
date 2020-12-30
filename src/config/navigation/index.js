@@ -5,14 +5,20 @@ import {
 } from '@react-navigation/stack';
 import HomeNavigation from '../HomeNavigation';
 import Modal from '../../common/Modal';
+import Login from '../../features/Login';
+import { Registration } from '../../features/Registration';
+import SplashScreen from '../../features/SplashScreen';
 
 const RootStack = createStackNavigator();
 const MainStack = createStackNavigator();
 
 const MainStackScreen = () => {
   return (
-    <MainStack.Navigator initialRouteName="Home" headerMode="none">
+    <MainStack.Navigator initialRouteName="SplashScreen" headerMode="none">
+      <MainStack.Screen name="Login" component={Login} />
       <MainStack.Screen name="Home" component={HomeNavigation} />
+      <MainStack.Screen name="Registration" component={Registration} />
+      <MainStack.Screen name="SplashScreen" component={SplashScreen} />
     </MainStack.Navigator>
   );
 };

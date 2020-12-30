@@ -20,7 +20,7 @@ export default ({ navigation, route }) => {
   const {
     visible,
     component: ComponentToRender,
-    width = Metrics.screenWidth - Metrics.spacingXLG,
+    width = Metrics.screenWidth - Metrics.spacing.xlg,
     height,
     footerButtons,
     closable = true,
@@ -91,7 +91,7 @@ export default ({ navigation, route }) => {
               <ButtonContainer>
                 <Button
                   style={{
-                    marginTop: Metrics.spacingLG,
+                    marginTop: Metrics.spacing.lg,
                   }}
                   label={(btnRight || btnLeft).text}
                   onPress={(btnRight || btnLeft).onPress}
@@ -111,7 +111,7 @@ const CloseButton = ({ handleClose }) => {
       <TouchableOpacity onPress={handleClose}>
         <Icon
           size={30}
-          color={Colors.mainTheme.gray}
+          color={Colors.mainTheme.primary}
           iconName="close"
           source="MaterialIcons"
         />
@@ -122,10 +122,10 @@ const CloseButton = ({ handleClose }) => {
 
 const styles = StyleSheet.create({
   modalContainer: {
-    borderRadius: Metrics.spacingMD,
+    borderRadius: Metrics.spacing.md,
     backgroundColor: Colors.mainTheme.white,
-    marginLeft: Metrics.spacingXLG / 2,
-    marginRight: Metrics.spacingXLG / 2,
-    padding: Metrics.spacingMD,
+    marginLeft: Metrics.spacing.xlg / 2,
+    marginRight: Metrics.spacing.xlg / 2,
+    padding: Metrics.spacing.md,
   },
 });

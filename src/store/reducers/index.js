@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux';
-import example from './example';
 import auth from './auth';
-import patient from './patient';
+import user from './user';
 
 export default combineReducers({
-  example,
   auth,
-  patient,
+  user,
 });

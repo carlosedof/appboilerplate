@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { Snackbar } from 'react-native-paper';
+import { Snackbar as Snackpaper } from 'react-native-paper';
 import { setRef } from './snackbarUtils';
 import { Text } from '../../common';
 import { Colors, Metrics } from '../../config';
 
-export default class MyComponent extends React.Component {
+export default class Snackbar extends React.Component {
   state = {
     visible: false,
     text: '',
@@ -27,7 +27,7 @@ export default class MyComponent extends React.Component {
     const { visible, text } = this.state;
 
     return (
-      <Snackbar
+      <Snackpaper
         duration={5000}
         style={{ backgroundColor: Colors.mainTheme.primary }}
         visible={visible}
@@ -46,7 +46,7 @@ export default class MyComponent extends React.Component {
         >
           {text}
         </Text>
-      </Snackbar>
+      </Snackpaper>
     );
   }
 }

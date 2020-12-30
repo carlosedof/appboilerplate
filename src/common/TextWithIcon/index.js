@@ -8,7 +8,7 @@ import Text from '../Text';
 
 const TextWithIcon = ({
   size = Metrics.fontSize.md,
-  textColor = Colors.mainTheme.black,
+  textColor = Colors.mainTheme.aux,
   children,
   bolder = false,
   style,
@@ -19,10 +19,10 @@ const TextWithIcon = ({
   backgroundColor = Colors.softRed,
 }) => {
   return (
-    <Flex dir="row" verticalMargin={Metrics.spacingSM}>
+    <Flex dir="row" verticalMargin={Metrics.spacing.sm}>
       <Flex
         width={25}
-        verticalPadding={Metrics.spacingSM}
+        verticalPadding={Metrics.spacing.sm}
         align="flex-start"
         justify="flex-start"
         height={100}

@@ -53,7 +53,7 @@ const InputText = ({
         {...rest}
         style={{
           width: '100%',
-          marginBottom: Metrics.spacingSM,
+          marginBottom: Metrics.spacing.sm,
         }}
         mode="outlined"
         error={error}
@@ -98,19 +98,19 @@ const InputText = ({
         <Flex
           dir="row"
           position="absolute"
-          right={Metrics.spacingMD}
+          right={Metrics.spacing.md}
           width={12}
           justify="center"
           align="center"
         >
-          <ActivityIndicator size={30} color={Colors.mainTheme.black} />
+          <ActivityIndicator size={30} color={Colors.mainTheme.aux} />
         </Flex>
       )}
       {!button && !showSpinner && icon && (
         <Flex
           dir="row"
           position="absolute"
-          right={Metrics.spacingMD}
+          right={Metrics.spacing.md}
           width={12}
           justify="center"
           align="center"

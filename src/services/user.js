@@ -1,10 +1,8 @@
 import api from './api';
 
 const createRequest = (requestData) => {
-  delete requestData.confirmSenha;
-  delete requestData.gestante;
   return api
-    .post(`aplicativo/paciente`, requestData)
+    .post(`aplicativo/user`, requestData)
     .then((response) => {
       return response;
     })
@@ -15,7 +13,7 @@ const createRequest = (requestData) => {
 
 const validateCpf = (cpf) => {
   return api
-    .post('aplicativo/paciente/validar-cpf-existente', { cpf })
+    .post('aplicativo/user/validar-cpf-existente', { cpf })
     .then((response) => response)
     .catch((err) => {
       throw err;

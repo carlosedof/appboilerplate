@@ -69,7 +69,7 @@ export default ({
       />
       <CalendarIconButton onPress={openCalendar}>
         <Icon
-          color={Colors.mainTheme.gray}
+          color={Colors.mainTheme.primary}
           size={20}
           iconName="calendar"
           source="Feather"

@@ -1,7 +1,11 @@
 import { DefaultTheme } from 'react-native-paper';
 
-const appBg = '#f1f1f1';
-const white = '#fff';
+const appBg = '#F2EBE5';
+const white = '#F2EBE5';
+const primary = '#647295';
+const secondary = '#9F496E';
+const aux = '#2B262D';
+
 const lightGray = '#e8e8e8';
 const softGray = '#d4d4d4';
 const gray = '#7f7f7f';
@@ -22,41 +26,32 @@ const purple = '#8883E9';
 const mapPurple = '#A461D8';
 
 const mainTheme = {
-  primary: blue,
-  secondary: white,
-  textPrimary: white,
-  textSecondary: blue,
-  softGray,
-  lightGray,
-  gray,
+  primary,
+  secondary,
   error: red,
-  black,
-  softBlack,
   white,
-  btnPrimary: green,
-  btnSecondary: transparent,
+  aux,
+  btnPrimary: primary,
+  btnSecondary: secondary,
   appBg,
-  darkBlue,
 };
 
 const alternativeTheme = {
-  primary: white,
-  secondary: blue,
-  textPrimary: blue,
-  textSecondary: white,
-  softGray,
-  gray,
+  primary: secondary,
+  secondary: primary,
   error: red,
-  black,
-  btnPrimary: transparent,
-  btnSecondary: green,
+  white,
+  aux,
+  btnPrimary: secondary,
+  btnSecondary: primary,
+  appBg,
 };
 
 const paperMainTheme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
-    primary: blue,
+    primary,
     error: red,
   },
 };

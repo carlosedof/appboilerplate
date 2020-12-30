@@ -20,11 +20,11 @@ const DualSelect = ({
   useEffect(() => onChange(answer), [answer]);
 
   return (
-    <Flex verticalMargin={Metrics.spacingMD}>
-      <Text color={Colors.mainTheme.black} size={Metrics.fontSize.sm}>
+    <Flex verticalMargin={Metrics.spacing.md}>
+      <Text color={Colors.mainTheme.aux} size={Metrics.fontSize.sm}>
         <Bold>{question}</Bold>
       </Text>
-      <Flex dir="row" verticalMargin={Metrics.spacingMD}>
+      <Flex dir="row" verticalMargin={Metrics.spacing.md}>
         <TouchableOpacityStyled
           answer={answer}
           onPress={() => {

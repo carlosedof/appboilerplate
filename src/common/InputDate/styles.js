@@ -6,7 +6,7 @@ export const CalendarIconButton = styled.TouchableOpacity`
   position: absolute;
   align-self: flex-end;
   z-index: 2;
-  right: ${Metrics.spacingLG}px;
+  right: ${Metrics.spacing.lg}px;
 `;
 
 export const NonEditable = styled.View`

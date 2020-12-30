@@ -17,6 +17,6 @@ export const ViewStyled = styled(View)`
     if (btLeft) {
       return `bottom: 10px; left: 10px;`;
     }
-    return `top: 0; right: ${Metrics.spacingLG}px`;
+    return `top: 0; right: ${Metrics.spacing.lg}px`;
   }}
 `;

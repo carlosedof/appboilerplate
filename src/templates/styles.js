@@ -7,7 +7,7 @@ export const Header = styled.ImageBackground.attrs(({ background }) => ({
   background-color: ${Colors.mainTheme.primary};
   height: ${Metrics.screenHeight / 6}px;
   align-items: center;
-  padding: 0 ${Metrics.spacingLG}px;
+  padding: 0 ${Metrics.spacing.lg}px;
   padding-top: ${({ statusBarHeight }) => statusBarHeight}px;
   overflow: hidden;
   flex-direction: row;
@@ -36,15 +36,6 @@ export const ChildrenContainer = styled.View`
   border-radius: 25px;
   position: absolute;
   bottom: 0;
-`;
-
-export const HeaderTransparent = styled.View`
-  background-color: transparent;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: ${Metrics.screenHeight / 6}px;
-  z-index: 2;
 `;
 
 export const Title = styled.Text`
