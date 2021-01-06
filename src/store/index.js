@@ -1,15 +1,20 @@
-import { createStore, compose, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
+import AsyncStorage from '@react-native-community/async-storage';
+import { persistReducer } from 'redux-persist';
 
 import reducers from './reducers';
 import sagas from './sagas';
 
-const middleware = [];
+const persistConfig = {
+  key: 'boilerplate',
+  storage: AsyncStorage,
+  whitelist: ['auth', 'user'],
+};
+
+const persistedReducer = persistReducer(persistConfig, reducers);
 const sagaMiddleware = createSagaMiddleware();
-middleware.push(sagaMiddleware);
-const enhancers = [applyMiddleware(...middleware)];
-const initialState = {};
-const store = createStore(reducers, initialState, compose(...enhancers));
+const store = createStore(persistedReducer, applyMiddleware(sagaMiddleware));
 
 const configureStore = () => {
   return { store };
